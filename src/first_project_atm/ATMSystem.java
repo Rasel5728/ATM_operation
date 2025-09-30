@@ -40,9 +40,9 @@ public class ATMSystem {
             System.out.println("Invalid number!");
             
             System.out.println("\"1. Deposit\"\n" +
-"\"2. Withdraw\"\n"+"\"3. Transaction history\"\n" +"\"4. +\"\\\"Reset Password\"\n" +"\"5. Exit\"\n");
+"\"2. Withdraw\"\n"+"\"3. Transaction history\"\n" +"\"4. +\"\"Reset Password\"\n" +"\"5. Exit\"\n");
             x=input.nextInt();
-            if(x<=5){
+            if(x<=5 || x>0){
             exp=false;
             }
         }
