@@ -29,6 +29,5 @@ public class User_Access {
             this.password=newPassword;
             System.out.println("Password is changed.");
         }
-    
     }    
 

@@ -28,42 +28,43 @@ public class ATMSystem {
             
             boolean y=true;
         while(y){
-        System.out.println("\"1. Deposit\"\n" +
-"\"2. Withdraw\"\n"+"\"3. Transaction history\"\n" +"\"4. Reset password\"\n" +"\"5. Exit\"\n");
+ System.out.println("\"1. Check Balance\"\n" +"\"2. Deposit\"\n" +
+"\"3. Withdraw\"\n"+"\"4. Transaction history\"\n" +"\"5. Reset password\"\n" +"\"6. Exit\"\n");
         int x=input.nextInt();
         
         boolean exp=false;
         if(x>5 || x<=0){
+            System.out.println("Invalid number!");
+
         exp=true;
         }
         while(exp){
-            System.out.println("Invalid number!");
             
-            System.out.println("\"1. Deposit\"\n" +
-"\"2. Withdraw\"\n"+"\"3. Transaction history\"\n" +"\"4. +\"\"Reset Password\"\n" +"\"5. Exit\"\n");
+            System.out.println("\"1. Check Balance\"\n" +"\"2. Deposit\"\n" +
+"\"3. Withdraw\"\n"+"\"4. Transaction history\"\n" +"\"5. Reset password\"\n" +"\"6. Exit\"\n");
             x=input.nextInt();
             if(x<=5 || x>0){
             exp=false;
             }
-        }
-        
-        
+        } 
         if(x==1){
+            obj2.check_balance();                 
+        }else if(x==2){
             System.out.print("Enter your deposit amount: ");
             double depositamount=input.nextDouble();
             obj2.diposit(depositamount);
             obj2.check_balance();
             
-        }else if(x==2){
-            System.out.println("Enter your withdraw amount: ");
+        }else if(x==3){
+            System.out.print("Enter your withdraw amount: ");
             double withdrawamount=input.nextDouble();
             obj2.withdraw(withdrawamount);
             obj2.check_balance();
             
-        }else if(x==3){
+        }else if(x==4){
         obj2.transaction_history();
         
-        }else if(x==4){
+        }else if(x==5){
             System.out.print("Enter your old password: ");
             input.nextLine();
             String old=input.nextLine();
@@ -74,18 +75,15 @@ public class ATMSystem {
                 obj1.resetpassword(newpass);
             }else{
                 System.out.println("Password not match");
-            }
-                                                                                         
-        }else if(x==5){
+            }                                                                                      
+                                                                     
+        }else if(x==6){
         y=false;
         }
         }
         System.out.println("Thanks for your Transaction");
         }else{
             System.out.println("Invalid username and password!");
-        }
-        
-        
-    }
-    
+        }            
+    }   
 }

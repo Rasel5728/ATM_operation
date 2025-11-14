@@ -24,18 +24,18 @@ public class ATM implements ATMOP {
     public void diposit(double amount){
     if(amount >0){
         balance=balance+amount;
-        history.add("Deposit: "+amount);
+        history.add("Deposit amount: "+amount);
         System.out.println("Deposit Amount: "+amount);
     }else{
-        System.out.println("Invalid deposit amount!");
-        
+        System.out.println("Invalid deposit amount!");      
     }
+    
     }
     @Override
     public void withdraw(double amount){
         if(amount>0 && amount<=balance){
         balance=balance-amount;
-        history.add("Withdraw: "+amount);
+        history.add("Withdraw amount: "+amount);
             System.out.println("Withdraw amount: "+amount);
         }else{
             System.out.println("Invalid withdraw amount!");
