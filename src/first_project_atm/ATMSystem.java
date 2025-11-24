@@ -33,8 +33,8 @@ public class ATMSystem {
         int x=input.nextInt();
         
         boolean exp=false;
-        if(x>5 || x<=0){
-            System.out.println("Invalid number!");
+        if(x>6 || x<=0){
+            System.out.println("Invalid number! Pleace enter 1-6");
 
         exp=true;
         }
@@ -43,7 +43,7 @@ public class ATMSystem {
             System.out.println("\"1. Check Balance\"\n" +"\"2. Deposit\"\n" +
 "\"3. Withdraw\"\n"+"\"4. Transaction history\"\n" +"\"5. Reset password\"\n" +"\"6. Exit\"\n");
             x=input.nextInt();
-            if(x<=5 || x>0){
+            if(x<=6 || x>0){
             exp=false;
             }
         } 
@@ -72,7 +72,7 @@ public class ATMSystem {
                 System.out.println("Password match");
                 System.out.print("Enter your new Password: ");
                 String newpass=input.nextLine();
-                obj1.resetpassword(newpass);
+                obj1.resetPassword(newpass);
             }else{
                 System.out.println("Password not match");
             }                                                                                      

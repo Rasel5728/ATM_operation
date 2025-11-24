@@ -25,7 +25,7 @@ public class User_Access {
         this.password = password;
     }
     
-    public void resetpassword(String newPassword){                 
+    public void resetPassword(String newPassword){                 
             this.password=newPassword;
             System.out.println("Password is changed.");
         }
