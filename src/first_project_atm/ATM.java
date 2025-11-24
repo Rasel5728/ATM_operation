@@ -10,11 +10,10 @@ import java.util.ArrayList;
 public class ATM implements ATMOP {
     
     private double balance;
-    private ArrayList<String> history;
+    ArrayList<String> history=new ArrayList<>();
     
     public ATM(double initialize){
-    balance=initialize;
-    this.history=new ArrayList<>();   
+    balance=initialize;      
     }
     @Override
     public void check_balance(){
