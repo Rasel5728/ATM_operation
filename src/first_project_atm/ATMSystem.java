@@ -1,5 +1,4 @@
 
-
 package first_project_atm;
 
 import java.util.Scanner;
@@ -12,11 +11,11 @@ public class ATMSystem {
     public static void main(String[] args) {
         Scanner input=new Scanner (System.in);
        
-       User_Access obj1=new User_Access();
-       obj1.setUsername("rasel");
-       obj1.setPassword("rasel28");
+        User_Access obj1=new User_Access();
+        obj1.setUsername("r");
+        obj1.setPassword("rr");
               
-        ATMOP obj2=new ATM(2000);
+        ATMOP obj2=new ATM(0.0);
         
         System.out.print("Enter your useranme:");
         String user=input.nextLine();
@@ -28,7 +27,7 @@ public class ATMSystem {
             
             boolean y=true;
         while(y){
- System.out.println("\"1. Check Balance\"\n" +"\"2. Deposit\"\n" +
+            System.out.println("\"1. Check Balance\"\n" +"\"2. Deposit\"\n" +
 "\"3. Withdraw\"\n"+"\"4. Transaction history\"\n" +"\"5. Reset password\"\n" +"\"6. Exit\"\n");
         int x=input.nextInt();
         
